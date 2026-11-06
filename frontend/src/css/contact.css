@@ -1,0 +1,128 @@
+
+/* ================= CONTACT HERO ================= */
+
+.contact-hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: radial-gradient(circle at center, #031226, #020617);
+}
+
+.contact-hero h1 {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+.contact-hero p {
+  color: #cfeaff;
+  margin-top: 10px;
+  font-size: 1.05rem;
+}
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+  padding: 60px 20px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(0, 200, 255, 0.05);
+  border: 1px solid rgba(0, 200, 255, 0.15);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.2);
+  flex-wrap: wrap;
+}
+
+/* FORM */
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form h2 {
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  background: #020617;
+  color: #cfeaff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 10px #00d4ff;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+/* BUTTON */
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* STATUS MESSAGE */
+
+.status-msg {
+  margin-top: 15px;
+  text-align: center;
+  color: #00ffcc;
+  font-weight: 500;
+}
+
+/* INFO */
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  border-left: 1px solid rgba(0, 200, 255, 0.2);
+  padding-left: 30px;
+}
+
+.contact-info h2 {
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #cfeaff;
+  margin-bottom: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}

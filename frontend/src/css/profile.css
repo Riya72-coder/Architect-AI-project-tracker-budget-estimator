@@ -1,0 +1,197 @@
+/* ================= PROFILE PAGE ================= */
+
+/* NOTE: .dashboard layout is NOT set here to avoid leaking
+   into Projects/Admin/Dashboard pages. Profile uses .profile-container
+   for its own two-column grid layout (set inline in JSX). */
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  color: var(--text-primary);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  height: 100%;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ================= PROFILE IMAGE ================= */
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--green-500);
+  margin-bottom: 15px;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
+
+/* ================= TEXT ================= */
+
+.profile-card h2 {
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* ================= INFO ================= */
+
+.profile-info p {
+  margin: 10px 0;
+  padding: 10px 14px;
+  background: var(--bg-subtle);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-align: left;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.profile-info strong {
+  color: var(--text-primary);
+}
+
+/* ================= UPLOAD ================= */
+
+.upload-section {
+  margin-top: 15px;
+}
+
+.upload-section input {
+  color: var(--text-primary);
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  font-size: 0.875rem;
+}
+
+.upload-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--green-500);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.upload-section button:hover {
+  background: var(--green-600);
+  transform: translateY(-1px);
+}
+
+/* ================= STATS ================= */
+
+.profile-stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-box {
+  background: var(--green-100);
+  border: 1px solid var(--green-300);
+  padding: 12px 14px;
+  border-radius: 12px;
+  width: 80px;
+  text-align: center;
+}
+
+.stat-box h3 {
+  margin: 0;
+  color: var(--green-700-text);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.stat-box p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* ================= RIGHT CARDS ================= */
+
+.activity-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.activity-card h3 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+/* ================= RECENT ACTIVITY ================= */
+
+#recentActivity {
+  text-align: left;
+  margin-top: 10px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+#recentActivity div {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+#recentActivity small {
+  color: var(--text-placeholder);
+  font-size: 0.75rem;
+}
+
+/* ================= NOTIFICATION ================= */
+/* (handled by global style.css override) */
+
+/* ================= FOOTER ================= */
+
+/* (handled globally) */
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box {
+    width: 100%;
+  }
+}

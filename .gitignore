@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+chatbot-backend/venv/
+__pycache__/
+*.pyc
+
+# Java build artifacts
+backend/target/
+*.class
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ============ SECRETS — Never commit these ============
+# Real .env files (all services)
+.env
+**/.env
+# Keep .env.example files (they document required vars, no real secrets)
+!.env.example
+!**/.env.example
+
